@@ -1,0 +1,52 @@
+*{
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.inputBox{
+    width: 42rem !important;
+}
+
+#cv-form{
+    /* display: none; */
+}
+
+#cv-template{
+    display: none;
+}
+
+.UserImage{
+    width: 180px;
+}
+
+.leftCol{
+    background: linear-gradient(180deg, rgba(78,253,255,1) 0%, rgba(104,221,255,1) 0%, rgba(255,165,0,1) 0%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%);
+    border: none;
+    border-radius: 12px;
+}
+
+.rightCol{
+    background: linear-gradient(180deg, rgba(78,253,255,1) 0%, rgba(104,221,255,1) 0%, rgba(255,165,0,1) 0%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%);
+    border: none;
+    border-radius: 12px;
+}
+
+.fullCard{
+    border: none !important;
+    border-radius: 12px !important;
+}
+
+.cardHead{
+    background: linear-gradient(180deg, rgba(78,253,255,1) 0%, rgba(104,221,255,1) 0%, rgba(255,165,0,1) 0%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%);
+    border: none;
+    border-bottom: none !important;
+    border-radius: 12px !important;
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+.cardB{
+    border: none;
+}

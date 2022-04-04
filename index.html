@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <!-- Code Start -->
+    <div class="container-fluid" id="cv-form">
+      <h1 class="text-center fw-bold m-2">Resume Generator</h1>
+      <h5 class="text-center m-2">Create your resume in a minute</h5>
+      <div class="row">
+        <div class="col-xxl-6">
+          <h3 class="text-center fw-bold m-4">Personal Information</h3>
+          <div class="form-group">
+            <label for="nameField" class="m-2">Your Full Name</label>
+            <br />
+            <input
+              type="text"
+              id="nameField"
+              class="form-control ms-2 inputBox"
+              placeholder="Enter here"
+            />
+          </div>
+          <div class="form-group">
+            <label for="contactField" class="m-2">Your Contact Details</label>
+            <br />
+            <input
+              type=""
+              autocomplete="off"
+              id="contactField"
+              class="form-control ms-2 inputBox"
+              placeholder="Enter here"
+            />
+          </div>
+          <div class="form-group">
+            <label for="emailField" class="m-2">Your E-mail Id</label>
+            <br />
+            <input
+              type=""
+              autocomplete="off"
+              id="emailField"
+              class="form-control ms-2 inputBox"
+              placeholder="Enter here"
+            />
+          </div>
+          <div class="form-group">
+            <label for="addressField" class="m-2">Your Address</label>
+            <br />
+            <textarea
+              type=""
+              autocomplete="off"
+              id="addressField"
+              class="form-control ms-2 inputBox"
+              placeholder="Enter here"
+            ></textarea>
+          </div>
+          <p class="text-danger fw-bold m-2">Important Links</p>
+          <div class="form-group">
+            <label for="linkedinField" class="m-2">Your Linkedin Links</label>
+            <br />
+            <input
+              type=""
+              autocomplete="off"
+              id="linkedinField"
+              class="form-control ms-2 inputBox"
+              placeholder="Enter here"
+            />
+          </div>
+          <div class="form-group">
+            <label for="githubField" class="m-2">Your Github Links</label>
+            <br />
+            <input
+              type=""
+              autocomplete="off"
+              id="githubField"
+              class="form-control ms-2 inputBox"
+              placeholder="Enter here"
+            />
+          </div>
+        </div>
+
+        <div class="col-xxl-6">
+          <h3 class="text-center fw-bold m-4">Professional Information</h3>
+          <div class="form-group">
+            <label for="" class="m-2">Objective</label>
+            <br />
+            <textarea
+              type="text"
+              class="form-control ms-2 inputBox"
+              placeholder="Enter here"
+              id="objectiveField"
+            ></textarea>
+          </div>
+          <div class="form-group" id="we">
+            <label for="" class="m-2">Work Experience</label>
+            <br />
+            <textarea
+              type="text"
+              class="form-control ms-2 inputBox weField"
+              placeholder="Enter here"
+            ></textarea>
+            <!-- New Textarea -->
+            <div class="cointainer p-2" id="weAddButton">
+              <button class="btn btn-info" onclick="addNewWEField()">
+                Add
+              </button>
+            </div>
+          </div>
+          <div class="form-group" id="aq">
+            <label for="" class="m-2">Academic Qualification</label>
+            <br />
+            <textarea
+              type="text"
+              class="form-control ms-2 inputBox aqField"
+              placeholder="Enter here"
+            ></textarea>
+            <div class="cointainer p-2" id="aqAddButton">
+              <button class="btn btn-info" onclick="addNewAQField()">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="container m-2">
+          <button class="btn btn-info btn-lg" onclick="generateCV()">
+            Generate CV
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Code End -->
+
+
+
+
+
+
+    <!-- CV Template -->
+    <div class="container-fluid" id="cv-template">
+      <div class="row justify-content-center m-1">
+        <div class="col-md-4 text-center p-5 leftCol">
+          <!-- left col -->
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaWtdPNuIx_6dFTTSM35iiysjR6qd7P1Vwfw&usqp=CAU"
+            alt=""
+            class="UserImage"
+          />
+          <div class="container">
+            <h4 class="my-2" id="nameT1">Your Name</h4>
+            <h6 id="contactT">Your Phone No.</h6>
+            <h6 id="emailT">Your Email Id</h6>
+            <h6 id="addressT">Your current Address</h6>
+
+            <hr />
+            <p>
+              <a id="linkedInT" href="#1">Your Linkedin Profile Link</a>
+            </p>
+            <p>
+              <a id="githubT" href="#1">Your Github Profile Link</a>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-7 p-5 rightCol mx-1">
+          <!-- Right col -->
+          <h1 class="text-center" id="nameT2">Your Name</h1>
+          <!-- Objective Card -->
+          <div class="card mt-3 border-0 fullCard">
+            <div class="card-header m-1 cardHead">
+              <h3>Objective</h3>
+            </div>
+            <div class="card-body cardB">
+              <p id="objectiveT">About your objectives</p>
+            </div>
+          </div>
+          <!-- Work Experience -->
+          <div class="card mt-3 fullCard">
+            <div class="card-header m-1 cardHead">
+              <h3>Work Experience</h3>
+            </div>
+            <div class="card-body cardB">
+              <ul id="weT">
+                <li>About your Work Experience.</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Academic Qualification -->
+          <div class="card mt-3 fullCard">
+            <div class="card-header m-1 cardHead">
+              <h3>Academic Qualification</h3>
+            </div>
+            <div class="card-body cardB">
+              <ul id="aqT">
+                <li>About your Academic Qualification.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="container mt-3 text-center">
+            <button class="btn btn-info" onclick="printCV()">Print CV</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CV Template -->
+
+
+
+
+    <script src="./main.js"></script>
+  </body>
+</html>
